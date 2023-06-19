@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "title": "Producto 1",
+      "description": "Descripción del producto 1",
+      "price": 10.99,
+      "thumbnail": "imagen1.jpg",
+      "code": "P1",
+      "stock": 5
+    },
+    {
+      "id": 2,
+      "title": "Producto 2",
+      "description": "Descripción del producto 2",
+      "price": 19.99,
+      "thumbnail": "imagen2.jpg",
+      "code": "P2",
+      "stock": 12
+    },
+    {
+      "id": 3,
+      "title": "Producto 3",
+      "description": "Descripción del producto 3",
+      "price": 13.99,
+      "thumbnail": "imagen3.jpg",
+      "code": "P3",
+      "stock": 8
+    },
+    {
+      "id": 4,
+      "title": "Producto 4",
+      "description": "Descripción del producto 4",
+      "price": 15.99,
+      "thumbnail": "imagen4.jpg",
+      "code": "P4",
+      "stock": 14
+    },
+    {
+      "id": 5,
+      "title": "Producto 5",
+      "description": "Descripción del producto 5",
+      "price": 12.99,
+      "thumbnail": "imagen5.jpg",
+      "code": "P5",
+      "stock": 6
+    },
+    {
+      "id": 6,
+      "title": "Producto 6",
+      "description": "Descripción del producto 6",
+      "price": 1.99,
+      "thumbnail": "imagen6.jpg",
+      "code": "P6",
+      "stock": 16
+    },
+    {
+      "id": 7,
+      "title": "Producto 7",
+      "description": "Descripción del producto 7",
+      "price": 18.99,
+      "thumbnail": "imagen7.jpg",
+      "code": "P7",
+      "stock": 19
+    },
+    {
+      "id": 8,
+      "title": "Producto 8",
+      "description": "Descripción del producto 8",
+      "price": 11.99,
+      "thumbnail": "imagen8.jpg",
+      "code": "P8",
+      "stock": 9
+    },
+    {
+      "id": 9,
+      "title": "Producto 9",
+      "description": "Descripción del producto 9",
+      "price": 122.99,
+      "thumbnail": "imagen9.jpg",
+      "code": "P9",
+      "stock": 99
+    },
+    {
+      "id": 10,
+      "title": "Producto 10",
+      "description": "Descripción del producto 10",
+      "price": 110.99,
+      "thumbnail": "imagen10.jpg",
+      "code": "P10",
+      "stock": 99
+    },
+    {
+      "id": 11,
+      "title": "Producto 11",
+      "description": "Descripción del producto 11",
+      "price": 8.99,
+      "thumbnail": "imagen11.jpg",
+      "code": "P11",
+      "stock": 20
+    },
+    {
+      "id": 12,
+      "title": "Producto 12",
+      "description": "Descripción del producto 12",
+      "price": 14.99,
+      "thumbnail": "imagen12.jpg",
+      "code": "P12",
+      "stock": 15
+    }
+  ]
+  
