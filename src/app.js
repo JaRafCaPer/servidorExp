@@ -1,8 +1,8 @@
 import express from "express";
-import { ProductManager } from './ProductManager.js';
+import { productManager } from './productManager.js';
 
 const app = express();
-const manager = new ProductManager('products.json');
+const manager = new productManager('./src/products.json');
 
 app.get('/', (req, res) => {
   res.send('¡Bienvenido a la página de inicio!');

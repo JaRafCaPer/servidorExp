@@ -1,29 +1,29 @@
 import fs from 'fs';
-
-export class ProductManager {
+export class productManager {
   constructor(path) {
     this.path = path;
   }
 
-  addProduct(product) {
-    const products = this.getProducts();
+  async addProduct(product) {
+    const products = await this.getProducts();
     const id = this.getNextId(products);
     const newProduct = { id, ...product };
     products.push(newProduct);
-    this.saveProducts(products);
+    await this.saveProducts(products);
   }
 
-  getProducts() {
+  async getProducts() {
     try {
-      const data = fs.readFileSync(this.path, 'utf8');
+      const data = await fs.promises.readFile(this.path, 'utf8');
       return JSON.parse(data);
     } catch (error) {
+      console.error('Error reading products file:', error);
       return [];
     }
   }
 
-  getProductById(id) {
-    const products = this.getProducts();
+  async getProductById(id) {
+    const products = await this.getProducts();
     const product = products.find((p) => p.id === id);
     if (product) {
       return product;
@@ -32,32 +32,36 @@ export class ProductManager {
     }
   }
 
-  updateProduct(id, updatedFields) {
-    const products = this.getProducts();
+  async updateProduct(id, updatedFields) {
+    const products = await this.getProducts();
     const productIndex = products.findIndex((p) => p.id === id);
     if (productIndex !== -1) {
       const updatedProduct = { ...products[productIndex], ...updatedFields, id };
       products[productIndex] = updatedProduct;
-      this.saveProducts(products);
+      await this.saveProducts(products);
     } else {
       throw new Error('Not found: Producto no existe');
     }
   }
 
-  deleteProduct(id) {
-    const products = this.getProducts();
+  async deleteProduct(id) {
+    const products = await this.getProducts();
     const productIndex = products.findIndex((p) => p.id === id);
     if (productIndex !== -1) {
       products.splice(productIndex, 1);
-      this.saveProducts(products);
+      await this.saveProducts(products);
     } else {
       throw new Error('Not found: Producto no existe');
     }
   }
 
-  saveProducts(products) {
-    const data = JSON.stringify(products, null, 2);
-    fs.writeFileSync(this.path, data);
+  async saveProducts(products) {
+    try {
+      const data = JSON.stringify(products, null, 2);
+      await fs.promises.writeFile(this.path, data);
+    } catch (error) {
+      console.error('Error writing products file:', error);
+    }
   }
 
   getNextId(products) {
